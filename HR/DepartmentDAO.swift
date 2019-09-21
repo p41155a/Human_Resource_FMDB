@@ -9,6 +9,7 @@
 class DepartmentDAO {
     // 부서 정보를 담을 튜플 타입 정의
     typealias DepartRecord = (Int, String, String)
+    
     // SQLite 연결 및 초기화
     lazy var fmdb: FMDatabase! = {
         // 파일 매니저 객체를 생성

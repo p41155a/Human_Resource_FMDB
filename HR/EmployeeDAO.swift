@@ -20,6 +20,7 @@ enum EmpStateType: Int {
         }
     }
 }
+
 struct EmployeeVO {
     var empCd = 0           // 사원 코드
     var empName = ""    // 사원명
@@ -28,6 +29,7 @@ struct EmployeeVO {
     var departCd = 0     // 소속 부서 코드
     var departTitle = "" // 소속 부서명
 }
+
 class EmployeeDAO {
     lazy var fmdb: FMDatabase! = {
         let fileMgr = FileManager.default
@@ -40,12 +42,15 @@ class EmployeeDAO {
         let db = FMDatabase(path: dbPath)
         return db
     }()
+    
     init() {
         self.fmdb.open()
     }
+    
     deinit {
         self.fmdb.close()
     }
+    
     func find(departCd: Int = 0) -> [EmployeeVO] {
         // 반환할 데이터를 담을 [DepartRecord] 타입의 객체 정의
         var employeeList = [EmployeeVO]()
@@ -76,6 +81,7 @@ class EmployeeDAO {
         }
         return employeeList
     }
+    
     func get(empCd: Int) -> EmployeeVO? {
         let sql = """
             SELECT emp_cd, emp_name, join_date, state_cd, department.depart_title
@@ -119,6 +125,7 @@ class EmployeeDAO {
             return false
         }
     }
+    
     func remove(empCd: Int) -> Bool {
         do {
             let sql = "DELETE FROM employee WHERE emp_cd = ?"

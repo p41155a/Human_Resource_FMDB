@@ -35,6 +35,7 @@ class DepartPickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let pHeight = self.pickerView.frame.height
         self.preferredContentSize = CGSize(width: pWidth, height: pHeight)
     }
+    
     // 피커 뷰에 표시될 컴포넌트 개수
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -53,9 +54,7 @@ class DepartPickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             titleView?.font = UIFont.systemFont(ofSize: 14)
             titleView?.textAlignment = .center
         }
-        
         titleView?.text = "\(self.departList[row].departTitle) (\(self.departList[row].departAddr))"
-        
         return titleView!
     }
 }

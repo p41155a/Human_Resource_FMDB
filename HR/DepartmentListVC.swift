@@ -12,7 +12,8 @@ class DepartmentListVC: UITableViewController {
     var departList: [(departCd: Int, departTitle: String, departAddr: String)]! //데이터 소스용 멤버 변수
     // 클로저 구문을 이용한 []객체를 생성 후, 이를 departList에 대입하고 있는 형태인건가?
     let departDAO = DepartmentDAO() // SQLite 처리를 담당할 DAO 객체
-    // UI 초기화 함수
+    
+    // UI 초기화 메소드
     @IBAction func add(_ sender: Any) {
         let alert = UIAlertController(title: "신규 부서 등록", message: "신규 부서를 등록해 주세요", preferredStyle: .alert)
         // 부서명 및 주소 입력용 텍스트 필드 추가(https://junghun0.github.io/2019/05/20/ios-alert/) 문법참고

@@ -48,11 +48,9 @@ class DepartmentInfoVC: UITableViewController {
             textHeader.text = "소속 사원"
             icon.image = UIImage(imageLiteralResourceName: "employee")
         }
-        
         // 레이블과 이미지 뷰를 담을 컨테이너용 뷰 객체
         let v = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
         v.backgroundColor = UIColor(red: 0.93, green: 0.96, blue: 0.99, alpha: 1.0)
-        
         // 뷰에 레이블과 이미지 뷰 추가
         v.addSubview(textHeader)
         v.addSubview(icon)
