@@ -69,13 +69,14 @@ class DepartmentListVC: UITableViewController {
         return cell!
     }
     
+    // 테이블 목록을 클릭했을 경우
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 화면 이동 시 전달할 부서 코드
+        // 화면 이동 시 함께 전달할 부서 코드
         let departCd = self.departList[indexPath.row].departCd
-        
         // 이동할 대상 뷰 컨트롤러의 인스턴스
         let infoVC = self.storyboard?.instantiateViewController(withIdentifier: "DEPART_INFO")
         if let _infoVC = infoVC as? DepartmentInfoVC {
+            // 부서 코드를 전달한 다음, 푸시 방식으로 화면 이동
             _infoVC.departCd = departCd
             self.navigationController?.pushViewController(_infoVC, animated: true)
         }
@@ -94,6 +95,12 @@ class DepartmentListVC: UITableViewController {
         if departDAO.remove(departCd: departCd) {
             self.departList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            // 신규 부서 등록후 DB에서 목록 다시 읽고 테이블 뷰 갱신
+            self.departList = self.departDAO.find()
+            self.tableView.reloadData()
+            // 내비게이션 타이틀도 변경된 부서 정보 반영
+            let navTitle = self.navigationItem.titleView as! UILabel
+            navTitle.text = "부서 목록 \n" + " 총 \(self.departList.count) 개"
         }
     }
 }

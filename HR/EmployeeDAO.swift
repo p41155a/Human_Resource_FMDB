@@ -103,7 +103,7 @@ class EmployeeDAO {
     func create(param: EmployeeVO) -> Bool {
         do {
             let sql = """
-                INSERT INTO department (emp_name, join_date, state_cd, depart_cd)
+                INSERT INTO employee (emp_name, join_date, state_cd, depart_cd)
                 VALUES( ? , ? , ? , ? )
             """
             // Prepared Statement 를 위한 인자값
@@ -126,6 +126,24 @@ class EmployeeDAO {
             return true
         } catch let error as NSError {
             print("Insert Error : \(error.localizedDescription)")
+            return false
+        }
+    }
+    
+    func editState(empCd: Int, stateCd: EmpStateType) -> Bool {
+        do {
+            let sql = "UPDATE Employee SET state_cd = ? WHERE emp_cd = ? "
+            
+            // 인자값 배열
+            var params = [Any]()
+            params.append(stateCd.rawValue)
+            params.append(empCd)
+            
+            // 업데이트 실행
+            try self.fmdb.executeUpdate(sql, values: params)
+            return true
+        } catch let error as NSError {
+            print("UPDATE Error: \(error.localizedDescription)")
             return false
         }
     }

@@ -11,6 +11,7 @@
 		AF06EBB42334FADB00F89A39 /* EmployeeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF06EBB32334FADB00F89A39 /* EmployeeListVC.swift */; };
 		AF06EBB62334FB5A00F89A39 /* DepartPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF06EBB52334FB5A00F89A39 /* DepartPickerVC.swift */; };
 		AF06EBB82335044500F89A39 /* DepartmentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF06EBB72335044500F89A39 /* DepartmentInfoVC.swift */; };
+		AF06ECB8233542FD00F89A39 /* hr.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = AF06ECB7233542FD00F89A39 /* hr.sqlite */; };
 		AFAB002A23335A0700AD61DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB002923335A0700AD61DA /* AppDelegate.swift */; };
 		AFAB002C23335A0700AD61DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB002B23335A0700AD61DA /* ViewController.swift */; };
 		AFAB002F23335A0700AD61DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFAB002D23335A0700AD61DA /* Main.storyboard */; };
@@ -27,11 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF06EBAD2334F5DC00F89A39 /* hr.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = hr.sqlite; path = "../../../../../Downloads/Chapter06/Chapter06-HR/Chapter06-HR/hr.sqlite"; sourceTree = "<group>"; };
 		AF06EBB02334F7BE00F89A39 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		AF06EBB32334FADB00F89A39 /* EmployeeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListVC.swift; sourceTree = "<group>"; };
 		AF06EBB52334FB5A00F89A39 /* DepartPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartPickerVC.swift; sourceTree = "<group>"; };
 		AF06EBB72335044500F89A39 /* DepartmentInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentInfoVC.swift; sourceTree = "<group>"; };
+		AF06ECB7233542FD00F89A39 /* hr.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = hr.sqlite; path = ../../../../hr.sqlite; sourceTree = "<group>"; };
 		AFAB002623335A0700AD61DA /* HR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAB002923335A0700AD61DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFAB002B23335A0700AD61DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +98,7 @@
 		AFAB002823335A0700AD61DA /* HR */ = {
 			isa = PBXGroup;
 			children = (
-				AF06EBAD2334F5DC00F89A39 /* hr.sqlite */,
+				AF06ECB7233542FD00F89A39 /* hr.sqlite */,
 				AFAB002923335A0700AD61DA /* AppDelegate.swift */,
 				AFAB002B23335A0700AD61DA /* ViewController.swift */,
 				AFAB002D23335A0700AD61DA /* Main.storyboard */,
@@ -195,6 +196,7 @@
 				AFAB003423335A0800AD61DA /* LaunchScreen.storyboard in Resources */,
 				AFAB003123335A0800AD61DA /* Assets.xcassets in Resources */,
 				AFAB002F23335A0700AD61DA /* Main.storyboard in Resources */,
+				AF06ECB8233542FD00F89A39 /* hr.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

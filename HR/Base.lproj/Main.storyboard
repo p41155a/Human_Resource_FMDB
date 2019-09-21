@@ -23,7 +23,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DEPPART_CELL" textLabel="Ezb-Ns-DGj" detailTextLabel="zza-ek-oX6" style="IBUITableViewCellStyleSubtitle" id="Vm5-1g-GdL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DEPART_CELL" textLabel="Ezb-Ns-DGj" detailTextLabel="zza-ek-oX6" style="IBUITableViewCellStyleSubtitle" id="Vm5-1g-GdL">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vm5-1g-GdL" id="sq1-i0-QMm">
@@ -53,7 +53,13 @@
                             <outlet property="delegate" destination="auP-t3-9Mp" id="p5x-Gc-EuW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="부서 목록" id="TOd-ZN-Nws"/>
+                    <navigationItem key="navigationItem" title="부서 목록" id="TOd-ZN-Nws">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="S3t-vv-rBb">
+                            <connections>
+                                <action selector="add:" destination="auP-t3-9Mp" id="ctr-Yr-N9c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="GhM-da-fCe" kind="show" id="yTu-ox-lzt"/>
                     </connections>
@@ -65,8 +71,7 @@
         <!--부서 상세 정보-->
         <scene sceneID="qV3-Va-Bhf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1p2-XR-8mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController storyboardIdentifier="DEPART_INFO" id="GhM-da-fCe" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DEPART_INFO" id="GhM-da-fCe" customClass="DepartmentInfoVC" customModule="HR" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7NK-bn-idc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,6 +131,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="부서 상세 정보" id="vB3-4s-ihm"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1p2-XR-8mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1961" y="-60"/>
         </scene>
@@ -173,7 +179,18 @@
                             <outlet property="delegate" destination="QYc-hO-A3B" id="Ybb-Ap-l8t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="사원 목록" id="1UE-hh-9bS"/>
+                    <navigationItem key="navigationItem" title="사원 목록" id="1UE-hh-9bS">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="hdV-q7-2bT">
+                            <connections>
+                                <action selector="editing:" destination="QYc-hO-A3B" id="MW2-X5-7B6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8k6-XQ-zhZ">
+                            <connections>
+                                <action selector="add:" destination="QYc-hO-A3B" id="n5d-Bk-5og"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rf6-OJ-gL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
