@@ -1,4 +1,4 @@
-![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/50395024/65372865-c80a8c00-dcb0-11e9-9abe-91fea32321f3.gif)
+![IMG_0560](https://user-images.githubusercontent.com/50395024/68677444-7939ee00-059f-11ea-8c5f-39d213e5dedd.gif)
 
 EmployeeDAO의 소스 
 let dbSource = Bundle.main.path(forResource: "hr", ofType: "sqlite") 에서 아래와 같은 오류가 반복되었습니다. 
